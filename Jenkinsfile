@@ -19,7 +19,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh "echo Simulating build for ${env.BRANCH_NAME}"
+                // ✅ Use single quotes to let shell substitute $BRANCH_NAME properly
+                sh 'echo Simulating build for $BRANCH_NAME'
                 sleep 3
             }
         }
