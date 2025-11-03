@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'echo "Simulating build for ${env.BRANCH_NAME}"'
+                sh "echo Simulating build for ${env.BRANCH_NAME}"
                 sleep 3
             }
         }
